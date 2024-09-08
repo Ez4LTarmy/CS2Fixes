@@ -194,7 +194,7 @@ CON_COMMAND_CHAT_FLAGS(unban, "<steamid64> - unbans a player. Takes decimal STEA
 	ClientPrint(player, HUD_PRINTTALK, CHAT_PREFIX "User with STEAMID64 <%llu> has been unbanned.", iTargetSteamId64);
 }
 
-CON_COMMAND_CHAT_FLAGS(mute, "<name> <duration|0 (permament)> - mutes a player", ADMFLAG_CHAT)
+CON_COMMAND_CHAT_FLAGS(mute, "<name> <duration|0 (permament)> - mutes a player", ADMFLAG_GENERIC)
 {
 	if (args.ArgC() < 3)
 	{
@@ -273,7 +273,7 @@ CON_COMMAND_CHAT_FLAGS(mute, "<name> <duration|0 (permament)> - mutes a player",
 	PrintMultiAdminAction(nType, pszCommandPlayerName, "muted", (" for " + FormatTime(iDuration, false)).c_str());
 }
 
-CON_COMMAND_CHAT_FLAGS(unmute, "<name> - unmutes a player", ADMFLAG_CHAT)
+CON_COMMAND_CHAT_FLAGS(unmute, "<name> - unmutes a player", ADMFLAG_GENERIC)
 {
 	if (args.ArgC() < 2)
 	{
@@ -328,7 +328,7 @@ CON_COMMAND_CHAT_FLAGS(unmute, "<name> - unmutes a player", ADMFLAG_CHAT)
 	PrintMultiAdminAction(nType, pszCommandPlayerName, "unmuted");
 }
 
-CON_COMMAND_CHAT_FLAGS(gag, "<name> <duration|0 (permanent)> - gag a player", ADMFLAG_CHAT)
+CON_COMMAND_CHAT_FLAGS(gag, "<name> <duration|0 (permanent)> - gag a player", ADMFLAG_GENERIC)
 {
 	if (args.ArgC() < 3)
 	{
@@ -409,7 +409,7 @@ CON_COMMAND_CHAT_FLAGS(gag, "<name> <duration|0 (permanent)> - gag a player", AD
 	PrintMultiAdminAction(nType, pszCommandPlayerName, "gagged", (" for " + FormatTime(iDuration, false)).c_str());
 }
 
-CON_COMMAND_CHAT_FLAGS(ungag, "<name> - ungags a player", ADMFLAG_CHAT)
+CON_COMMAND_CHAT_FLAGS(ungag, "<name> - ungags a player", ADMFLAG_GENERIC)
 {
 	if (args.ArgC() < 2)
 	{
@@ -1011,7 +1011,7 @@ CON_COMMAND_CHAT_FLAGS(map, "<mapname> - change map", ADMFLAG_CHANGEMAP)
 	});
 }
 
-CON_COMMAND_CHAT_FLAGS(hsay, "<message> - say something as a hud hint", ADMFLAG_CHAT)
+CON_COMMAND_CHAT_FLAGS(hsay, "<message> - say something as a hud hint", ADMFLAG_GENERIC)
 {
 	if (args.ArgC() < 2)
 	{
