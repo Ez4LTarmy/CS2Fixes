@@ -426,7 +426,7 @@ CON_COMMAND_CHAT_FLAGS(setteam, "<name> <team (0-3)> - Set a player's team", ADM
 		PrintMultiAdminAction(nType, pszCommandPlayerName, "moved", szAction);
 }
 
-CON_COMMAND_CHAT_FLAGS(noclip, "- Toggle noclip on yourself", ADMFLAG_CHEATS)
+CON_COMMAND_CHAT_FLAGS(noclip, "- Toggle noclip on yourself", ADMFLAG_SLAY | ADMFLAG_CHEATS)
 {
 	if (!player)
 	{
