@@ -1265,7 +1265,7 @@ void ZR_Infect(CCSPlayerController* pAttackerController, CCSPlayerController* pV
 
 	ZR_CheckTeamWinConditions(CS_TEAM_T);
 
-	ZR_FakePlayerDeath(pAttackerController, pVictimController, "knife", bDontBroadcast); // or any other killicon
+	ZR_FakePlayerDeath(pAttackerController, pVictimController, "zombie_walking", bDontBroadcast); // or any other killicon
 
 	CCSPlayerPawn* pVictimPawn = (CCSPlayerPawn*)pVictimController->GetPawn();
 	if (!pVictimPawn)
